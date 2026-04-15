@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>Powerhouse Auth</title></head>
+<body>
+<script>
+  const params = new URLSearchParams(window.location.search);
+  const code = params.get('code');
+  const state = params.get('state');
+  if (code) {
+    window.location.href = `powerhouse://callback?code=${code}&state=${state}`;
+  }
+</script>
+<p>Redirecting back to Powerhouse...</p>
+</body>
+</html>
